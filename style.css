@@ -1,0 +1,40 @@
+#game-world {
+    height: 400px;
+    width: 800px;
+    background-color: grey;
+    position: relative; /* BUG FIX: Keeps the hero and pipes inside this box */
+    overflow: hidden;    /* BUG FIX: Prevents pipes from showing outside the box */
+}
+
+#hero {
+    height: 40px; /* Adjusted to 40px to match your JS '358' floor logic better */
+    width: 40px;
+    background-color: red;
+    position: absolute;
+}
+
+#enemy {
+    height: 60px;
+    width: 50px;
+    position: absolute;
+    left: 758px;
+    bottom: 0; /* BUG FIX: Changed from 642px so it actually sits on the floor */
+    background-color: green;
+}
+
+#pipeUp {
+    height: 70px;
+    width: 50px;
+    position: absolute;
+    left: 758px;
+    top: 0; /* BUG FIX: Ensures the top pipe hangs from the ceiling */
+    background-color: green;
+}
+
+#score {
+    position: absolute;
+    left: 658px;
+    top: 10px; /* Added top so it doesn't overlap with the ceiling pipe */
+    font-family: sans-serif;
+    color: white;
+}
